@@ -44,8 +44,7 @@ class Analysis extends Component {
                                 <br></br><br></br>
                                 Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.
                             </p>
-                        </Col>
-                        <h1 className='serviceMainTitle'>TECHNOLOGY</h1>
+                        </Col> 
                     </Row>
                 </Container>
             </Fragment>

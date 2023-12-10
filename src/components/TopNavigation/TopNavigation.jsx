@@ -13,6 +13,7 @@ class TopNavigation extends Component {
         this.state={
             navBarTitle:'navTitle',
             navBarLogo:[whiteLogo], //object,
+            navVariable:"dark",
             navBarBackground:"navBackground",
             navBarItem:"navItem"
         }
@@ -21,9 +22,9 @@ class TopNavigation extends Component {
     onScroll = () =>{
         console.log(window.scrollY);
         if(window.scrollY>100){
-            this.setState({navBarTitle:'navTitleScroll',navBarLogo:[blackLogo],navBarBackground:"navBackgroundScroll",navBarItem:"navItemScroll"});
+            this.setState({navBarTitle:'navTitleScroll',navBarLogo:[blackLogo],navBarBackground:"navBackgroundScroll",navBarItem:"navItemScroll",navVariable:"light"});
         } else {
-            this.setState({navBarTitle:'navTitle',navBarLogo:[whiteLogo],navBarBackground:"navBackground",navBarItem:"navItem"});
+            this.setState({navBarTitle:'navTitle',navBarLogo:[whiteLogo],navBarBackground:"navBackground",navBarItem:"navItem",navVariable:"dark"});
         }
     }
 
@@ -34,7 +35,7 @@ class TopNavigation extends Component {
     render() {
         return (
             <Fragment>
-                <Navbar collapseOnSelect fixed='top' data-bs-theme="dark" expand="lg" className={this.state.navBarBackground}>
+                <Navbar collapseOnSelect fixed='top' data-bs-theme={this.state.navVariable} expand="lg" className={this.state.navBarBackground}>
                     <Container>
                         <Navbar.Brand className={this.state.navBarTitle} href="#home">
                             <img src={this.state.navBarLogo}></img>
